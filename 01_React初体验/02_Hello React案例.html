@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<div id="root"></div>
+<script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+<script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+<script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+<script type="text/babel">
+  // ReactDOM.render(<h2>Hello World</h2>,document.querySelector('#root'))
+  const root = ReactDOM.createRoot(document.querySelector('#root'))
+  let message = "hello world"
+  function change (){
+    message = '123'
+    reactRender()
+  }
+  reactRender()
+  function reactRender(){
+    root.render((
+            <div>
+              <h2>{message}</h2>
+              <button onClick={change}>修改文本</button>
+            </div>
+    ))
+  }
+</script>
+</body>
+</html>
