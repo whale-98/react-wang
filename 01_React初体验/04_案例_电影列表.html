@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<div id="root"></div>
+<script src="../lib/react.js" crossorigin></script>
+<script src="../lib/react-dom.js" crossorigin></script>
+<script src="../lib/babel.js"></script>
+
+<script type="text/babel">
+  const root = ReactDOM.createRoot(document.querySelector('#root'))
+  class App extends React.Component{
+    constructor() {
+      super();
+      this.state = {
+        movies:['星际穿越','流浪地球','火星救援']
+      }
+    }
+    render(){
+      return(
+        <div>
+          <h2>电影列表</h2>
+          <ul>
+            {this.state.movies.map(item=><li>{item}</li>)}
+          </ul>
+        </div>
+      )
+    }
+  }
+  root.render(<App/>)
+</script>
+
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>计数器</title>
+</head>
+<body>
+<div id="root"></div>
+<script src="../lib/react.js" crossorigin></script>
+<script src="../lib/react-dom.js" crossorigin></script>
+<script src="../lib/babel.js"></script>
+
+
+<script type="text/babel">
+  const root = ReactDOM.createRoot(document.querySelector('#root'))
+  class App extends React.Component{
+    constructor() {
+      super();
+    }
+    render(){
+      return(
+        <div>
+        </div>
+      )
+    }
+  }
+  root.render(<App></App>)
+
+</script>
+</body>
+</html>

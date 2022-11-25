@@ -19,11 +19,18 @@
             }
         }
 
+        btnClick(){
+            console.log(this)
+            this.setState({
+                message: "hello react"
+            })
+        }
+
         render(){
             return(
                 <div>
                     <h2>{this.state.message}</h2>
-                    <button>修改文本</button>
+                    <button onClick={this.btnClick.bind(this)}>修改文本</button>
                 </div>
             )
         }
